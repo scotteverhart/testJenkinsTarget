@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                bat 'python --version'
+                bat 'c:\python27\python --version'
             }
         }
     }
