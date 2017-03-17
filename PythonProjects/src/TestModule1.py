@@ -27,12 +27,12 @@ class printStuff():
             
     def printText(self,listNum):
         
-        return "\t" + stringFormatter.addTwoHyphensBeforeAndAfter(self.listValues[listNum]) + "\t" + \
+        outputtext =  "\t" + stringFormatter.addTwoHyphensBeforeAndAfter(self.listValues[listNum]) + "\t" + \
             stringFormatter.addTwoAsterisksBeforeAndAfter(self.listValues[listNum]) + "\t" + \
             stringFormatter.addTwoCaretsBeforeAndAfter(self.listValues[listNum])
             
         self.of =file(outputFileName, 'w')
-        self.of.write(printRange())
+        self.of.write(outputtext)
         
 if __name__ == '__main__':
     printStuff().printRange()
