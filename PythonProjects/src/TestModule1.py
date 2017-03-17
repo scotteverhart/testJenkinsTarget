@@ -21,18 +21,19 @@ class printStuff():
     print
     
     def printRange(self):
+        self.of =file(self.outputFileName, 'w')
         for i in self.num:
-            print i,self.printText(i-1)
+            tmptxt =self.printText(i-1)
+            print i,tmptxt
+            self.of.write(tmptxt)
+            
         print "class processing complete"
             
     def printText(self,listNum):
         
-        outputtext =  "\t" + stringFormatter.addTwoHyphensBeforeAndAfter(self.listValues[listNum]) + "\t" + \
+        return "\t" + stringFormatter.addTwoHyphensBeforeAndAfter(self.listValues[listNum]) + "\t" + \
             stringFormatter.addTwoAsterisksBeforeAndAfter(self.listValues[listNum]) + "\t" + \
             stringFormatter.addTwoCaretsBeforeAndAfter(self.listValues[listNum])
-            
-        self.of =file(self.outputFileName, 'w')
-        self.of.write(outputtext)
         
 if __name__ == '__main__':
     printStuff().printRange()
