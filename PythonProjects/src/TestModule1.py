@@ -31,7 +31,7 @@ class printStuff():
             stringFormatter.addTwoAsterisksBeforeAndAfter(self.listValues[listNum]) + "\t" + \
             stringFormatter.addTwoCaretsBeforeAndAfter(self.listValues[listNum])
             
-        self.of =file(self.outputFileName, 'w')
+        self.of =file(self.outputFileName+${BUILD_NO}, 'w')
         self.of.write(outputtext)
         
 if __name__ == '__main__':
