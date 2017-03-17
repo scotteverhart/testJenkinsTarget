@@ -32,7 +32,7 @@ class printStuff():
             stringFormatter.addTwoCaretsBeforeAndAfter(self.listValues[listNum])
             
         self.of =file(self.outputFileName +"${BUILD_NO}", 'w')
-        self.of.write(outputtext)
+        of.write(self.outputtext)
         
 if __name__ == '__main__':
     printStuff().printRange()
