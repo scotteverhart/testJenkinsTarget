@@ -31,7 +31,7 @@ class printStuff():
             
     def printText(self,listNum):
         
-        return "\t" + stringFormatter.addTwoHyphensBeforeAndAfter(self.listValues[listNum]) + "\t" + \
+        return stringFormatter.addTwoHyphensBeforeAndAfter(self.listValues[listNum]) + "\t" + \
             stringFormatter.addTwoAsterisksBeforeAndAfter(self.listValues[listNum]) + "\t" + \
             stringFormatter.addTwoCaretsBeforeAndAfter(self.listValues[listNum]) + "\n"
         
