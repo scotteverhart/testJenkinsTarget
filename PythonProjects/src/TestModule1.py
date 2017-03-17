@@ -18,13 +18,19 @@ class printStuff():
     print "Values in num: ",num
     print "Values in listValues: ",listValues
     print
-        
+    
+    outputFileName = 'myTestFile.txt'
+    of =file(outputFileName, 'w')
+    
+    of.write(printRange())
+    
     def printRange(self):
         for i in self.num:
             print i,self.printText(i-1)
         print "class processing complete"
             
     def printText(self,listNum):
+        
         return "\t" + stringFormatter.addTwoHyphensBeforeAndAfter(self.listValues[listNum]) + "\t" + \
             stringFormatter.addTwoAsterisksBeforeAndAfter(self.listValues[listNum]) + "\t" + \
             stringFormatter.addTwoCaretsBeforeAndAfter(self.listValues[listNum])
