@@ -22,7 +22,7 @@ class printStuff():
     outputFileName = 'myTestFile.txt'
     of =file(outputFileName, 'w')
     
-    of.write(printRange())
+    of.write(self.printRange())
     
     def printRange(self):
         for i in self.num:
