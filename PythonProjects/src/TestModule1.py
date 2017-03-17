@@ -33,7 +33,7 @@ class printStuff():
         
         return "\t" + stringFormatter.addTwoHyphensBeforeAndAfter(self.listValues[listNum]) + "\t" + \
             stringFormatter.addTwoAsterisksBeforeAndAfter(self.listValues[listNum]) + "\t" + \
-            stringFormatter.addTwoCaretsBeforeAndAfter(self.listValues[listNum])
+            stringFormatter.addTwoCaretsBeforeAndAfter(self.listValues[listNum]) + "\n"
         
 if __name__ == '__main__':
     printStuff().printRange()
