@@ -9,6 +9,7 @@ import random
 
 class printStuff():
 
+    outputFileName = 'myTestFile.txt'
     randNum = random.randint(1,10)
     num = range(0,randNum)
     listValues = ["one  ","two  ","three","four ","five ", "six ", "seven ", "eight ", "nine ", "ten ", "eleven "]
@@ -18,11 +19,6 @@ class printStuff():
     print "Values in num: ",num
     print "Values in listValues: ",listValues
     print
-    
-    outputFileName = 'myTestFile.txt'
-    of =file(outputFileName, 'w')
-    
-    of.write(self.printRange())
     
     def printRange(self):
         for i in self.num:
@@ -34,6 +30,9 @@ class printStuff():
         return "\t" + stringFormatter.addTwoHyphensBeforeAndAfter(self.listValues[listNum]) + "\t" + \
             stringFormatter.addTwoAsterisksBeforeAndAfter(self.listValues[listNum]) + "\t" + \
             stringFormatter.addTwoCaretsBeforeAndAfter(self.listValues[listNum])
+            
+        self.of =file(outputFileName, 'w')
+        self.of.write(printRange())
         
 if __name__ == '__main__':
     printStuff().printRange()
