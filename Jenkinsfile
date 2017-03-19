@@ -10,7 +10,7 @@ pipeline {
     }
 	post {
         always {
-            '${WORKSPACE)/myTestFile.txt'
+            myTestFile.txt
         }
     }
 }
