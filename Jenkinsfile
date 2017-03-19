@@ -10,7 +10,7 @@ pipeline {
     }
 	post {
         always {
-            archive myTestFile.txt
+            archive 'myTestFile.txt'
         }
     }
 }
