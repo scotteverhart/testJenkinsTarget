@@ -10,7 +10,7 @@ pipeline {
     }
 	post {
         always {
-            C:\Program Files (x86)\Jenkins\workspace\rstPipeline_myFirstPipeline-JID5IFHV7Y3MVMLJOQDNSJROSZMQLVMLKMMV6WEUY3FCLG7KWZJA\myTestFile.txt
+            'C:\Program Files (x86)\Jenkins\workspace\rstPipeline_myFirstPipeline-JID5IFHV7Y3MVMLJOQDNSJROSZMQLVMLKMMV6WEUY3FCLG7KWZJA\myTestFile.txt'
         }
     }
 }
