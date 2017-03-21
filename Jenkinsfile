@@ -7,13 +7,15 @@ pipeline {
                 	bat 'c:/python27/python ./PythonProjects/src/TestModule1.py'
             		bat 'dir'
             		input message: 'Enter your name', ok: 'Click Me', submitterParameter: 'ApprovingSubmitter'
-            		echo $ApprovingSubmitter
+            		echo "Approved by " $ApprovingSubmitter
            	}
         }
     }
 	post {
         always {
+        	echo "archiving files"
             archive '*.txt'
+            echo "archiving complete"
         }
     }
 }
