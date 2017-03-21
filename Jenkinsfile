@@ -10,7 +10,7 @@ pipeline {
             steps {	
                 bat 'c:/python27/python ./PythonProjects/src/TestModule1.py'
             	bat 'dir'
-            	input message: 'Approval required to begin gitTest build', ok: 'Approve', cancel: 'Deny', submitterParameter: 'ApprovingSubmitter'
+            	input message: 'Approval required to begin gitTest build', ok: 'Approve', submitterParameter: 'ApprovingSubmitter'
             	build 'gitTest'
            	}
         }
