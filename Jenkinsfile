@@ -8,6 +8,7 @@ pipeline {
             		bat 'dir'
             		input message: 'Enter your name', ok: 'Click Me', submitterParameter: 'ApprovingSubmitter'
             		echo 'Approved by ' $ApprovingSubmitter
+            		build 'gitTest'
            	}
         }
     }
