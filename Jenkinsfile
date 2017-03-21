@@ -3,10 +3,10 @@ pipeline {
     stages {
         stage('build') {
             steps {
-            	step('run python'){
+            	step {
                 	bat 'c:/python27/python ./PythonProjects/src/TestModule1.py'
                 }
-                step('list directory'){
+                step {
             		bat 'dir'
             	}
             }
