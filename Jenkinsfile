@@ -10,9 +10,7 @@ pipeline {
             steps {	
                 bat 'c:/python27/python ./PythonProjects/src/TestModule1.py'
             	bat 'dir'
-            	bat "echo 'protocol=https'"
-            	bat "echo 'host=https://github.com/scotteverhart'"
-            	bat 'echo user.name="scotteverhart"'
+            	bat 'git add *.txt'
             	bat 'git tag -a "myFirstTag" -u "$user.name" -m "FromJenkins"'
             	bat 'git push --tags'
             	input message: 'Approval required to begin gitTest build', ok: 'Approve', submitterParameter: 'ApprovingSubmitter'
