@@ -10,8 +10,8 @@ pipeline {
             steps {	
                 bat 'c:/python27/python ./PythonProjects/src/TestModule1.py'
             	bat 'dir'
-            	git tag -a "myFirstTag" -m "FromJenkins"
-            	git push --tags
+            	bat 'git tag -a "myFirstTag" -m "FromJenkins"'
+            	bat 'git push --tags'
             	input message: 'Approval required to begin gitTest build', ok: 'Approve', submitterParameter: 'ApprovingSubmitter'
             	build 'gitTest'
            	}
