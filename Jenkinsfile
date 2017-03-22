@@ -13,7 +13,7 @@ pipeline {
             	bat "echo 'protocol=https'"
             	bat "echo 'host=https://github.com/scotteverhart'"
             	bat 'echo user.name="scotteverhart"'
-            	bat 'git tag -a "myFirstTag" -u $user.name -m "FromJenkins"'
+            	bat 'git tag -a "myFirstTag" -u "$user.name" -m "FromJenkins"'
             	bat 'git push --tags'
             	input message: 'Approval required to begin gitTest build', ok: 'Approve', submitterParameter: 'ApprovingSubmitter'
             	build 'gitTest'
