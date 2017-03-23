@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('build') {
             steps {	
-               checkout([$class: 'GitSCM', branches: [[name: '*/myFirstPipeline']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: ' f0710d02-6c89-44fc-b360-d5a04f0eac4a', url: 'git@github.com:scotteverhart/myGitHubRepo.git']]])
+               checkout([$class: 'GitSCM', branches: [[name: '*/myFirstPipeline']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: ' bb6b58d8-95ee-4709-966e-09d702139ebd', url: 'git@github.com:scotteverhart/myGitHubRepo.git']]])
                 bat 'c:/python27/python ./PythonProjects/src/TestModule1.py'
             	bat 'dir'
 			    bat "git tag -a 'tag_from_jenkins' -m 'Jenkins'"
