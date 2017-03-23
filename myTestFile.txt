@@ -5,5 +5,3 @@
 --four --	**four **	^^four ^^
 --five --	**five **	^^five ^^
 --six --	**six **	^^six ^^
---seven --	**seven **	^^seven ^^
---eight --	**eight **	^^eight ^^
