@@ -10,7 +10,7 @@ pipeline {
 				    bat 'git config --global user.name "scott everhart"'
 				    bat 'git config --global user.email "scott.everhart1@gmail.com"'
 				    //bat "git tag -a 'tag_from_jenkins' -m 'Jenkins'"
-				    bat 'git push https://' + ${GIT_USERNAME} + ':' + ${GIT_PASSWORD} + '@github.com/scotteverhart/myGitHubRepo.git --tags'
+				    bat "git push https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/scotteverhart/myGitHubRepo.git --tags"
 				}
             	input message: 'Approval required to begin gitTest build', ok: 'Approve', submitterParameter: 'ApprovingSubmitter'
             	build 'gitTest'
