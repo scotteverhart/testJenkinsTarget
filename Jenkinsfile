@@ -12,7 +12,7 @@ pipeline {
 				    bat 'git config --global user.email "scott.everhart1@gmail.com"'
 				    bat "git pull origin myFirstPipeline"
 				    bat "git add *.txt"
-				    bat "git commit"
+				    bat "git commit -m 'FromJenkinsPipeline"
 				    bat "git push"
 				}
             	input message: 'Approval required to begin gitTest build', ok: 'Approve', submitterParameter: 'ApprovingSubmitter'
