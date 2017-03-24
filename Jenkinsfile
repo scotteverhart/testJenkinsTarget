@@ -7,14 +7,15 @@ pipeline {
                 bat "git checkout myFirstPipeline"
                 bat 'c:/python27/python ./PythonProjects/src/TestModule1.py'
             	bat 'dir'
-				 //withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'bb6b58d8-95ee-4709-966e-09d702139ebd', usernameVariable: 'GIT_USERNAME', passwordVariable: 'GIT_PASSWORD']]) {
-				    //bat 'git config --global user.name "scott everhart"'
-				    //bat 'git config --global user.email "scott.everhart1@gmail.com"'
-				    //bat "git pull origin myFirstPipeline"
-				    //bat "git add *.txt"
-				    //bat "git commit -m 'FromJenkinsPipeline'"
-				    //bat "git push"
-				//}
+				withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'bb6b58d8-95ee-4709-966e-09d702139ebd', usernameVariable: 'GIT_USERNAME', passwordVariable: 'GIT_PASSWORD']]) {
+				    bat 'git config --global user.name "scott everhart"'
+				    bat 'git config --global user.email "scott.everhart1@gmail.com"'
+				    bat "git pull origin myFirstPipeline"
+				    bat "git add *.txt"
+				    bat "git tag -a 'tag_name_' + "${env.BUILD_NUMBER}"
+				    bat "git commit -m 'FromJenkinsPipeline'"
+				    bat "git push --tags"
+				}
             	input message: 'Approval required to begin gitTest build', ok: 'Approve', submitterParameter: 'ApprovingSubmitter'
             	build 'gitTest'
            	}
