@@ -13,7 +13,7 @@ pipeline {
 				    bat "git pull origin myFirstPipeline"
 				    bat "git add *.txt"
 				    bat "git tag -a \"tag_name_${env.BUILD_NUMBER}\" -m \"tag From Jenkins\""
-				    bat "git commit -m 'FromJenkinsPipeline'"
+				    bat "git commit -m \"From Jenkins Pipeline Build ${env.BUILD_NUMBER}\""
 				    bat "git push --tags"
 				}
             	input message: 'Approval required to begin gitTest build', ok: 'Approve', submitterParameter: 'ApprovingSubmitter'
