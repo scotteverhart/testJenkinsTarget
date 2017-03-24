@@ -12,7 +12,7 @@ pipeline {
 				    bat 'git config --global user.email "scott.everhart1@gmail.com"'
 				    bat "git pull origin myFirstPipeline"
 				    bat "git add *.txt"
-				    bat "git tag -a 'tag_name_' + ${env.BUILD_NUMBER}"
+				    bat 'git tag -a "tag_name_${env.BUILD_NUMBER}"'
 				    bat "git commit -m 'FromJenkinsPipeline'"
 				    bat "git push --tags"
 				}
